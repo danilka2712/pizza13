@@ -10,7 +10,7 @@
 				<div class="container mx-auto py-3 flex  justify-between items-center">
 					<div>
 						<a class="text-3xl font-semibold font-heading" href="#">
-							А1ЕДА
+							ЕДАДИЛ
 						</a>
 					</div>
 
@@ -64,6 +64,12 @@
 			</nav>
 		</section>
 	</div>
+</div>
+<div class="h-14 sm:hidden container mx-auto px-4 flex justify-between px-12  rounded-t-xl fixed w-full bottom-0 bg-[#1b1b1b]">
+    <a class="flex mt-3" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#f2f2f2" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444l-7 5.444V19h14z"/></svg></a>
+    <a class="flex mt-3" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#f2f2f2" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444l-7 5.444V19h14z"/></svg></a>
+    <a class="flex mt-3" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#f2f2f2" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444l-7 5.444V19h14z"/></svg></a>
+
 </div>
 
   <slot />
