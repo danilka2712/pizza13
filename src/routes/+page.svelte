@@ -58,7 +58,7 @@
 					<div class="w-44 h-full rounded-lg">
 						<img
 							class="object-cover rounded-xl h-full w-full p-2"
-							src="Ветчина и грибы + Пепперон 267 Н.png"
+							src="pizza.png"
 							alt=""
 						/>
 					</div>
