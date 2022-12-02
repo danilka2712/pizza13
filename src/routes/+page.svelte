@@ -55,7 +55,7 @@
 				<div
 					class=" relative z-0 bg-[#232323] border-[#333333] border flex  sm:flex-col justify-between  rounded-xl "
 				>
-					<div class="w-44 h-full rounded-lg">
+					<div class="w-28 h-full rounded-lg">
 						<img
 							class="object-cover rounded-xl h-full w-full p-2"
 							src="pizza.png"
