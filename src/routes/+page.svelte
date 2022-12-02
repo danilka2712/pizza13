@@ -30,7 +30,7 @@
 					<img class="object-cover rounded-lg h-full w-full p-2" src="sushi.webp" alt="" />
 				</div>
 				<div class="p-2 ">
-					<a class="" href="/">Суши набор</a>
+					<a class=" font-medium" href="/">Суши набор</a>
 					<p class="text-xs text-gray-400 pr-14">Описание товара, суши роллы</p>
 					<div class="flex items-center justify-between">
 						<p class=" text-white text-lg">1990 ₽</p>
