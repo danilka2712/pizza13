@@ -33,7 +33,7 @@
 					<a class="" href="/">Суши набор</a>
 					<p class="text-xs text-gray-400 pr-14">Описание товара, суши роллы</p>
 					<div class="flex items-center justify-between">
-						<p class=" text-white ">1990 P</p>
+						<p class=" text-white text-lg">1990 ₽</p>
 						<button class=" text-sm bg-red-700 px-4 py-2 rounded-xl">Добавить</button>
 					</div>
 				</div>
