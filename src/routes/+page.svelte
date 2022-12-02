@@ -69,7 +69,7 @@
 					</div>
 					<div class="p-2 ">
 						<a class=" font-medium" href="/">{product.name}</a>
-						<p class="text-xs text-gray-400 pr-14">Описание товара, суши роллы</p>
+						<p class="text-xs text-gray-400 pr-14">Описание товара, Пицца описание суши роллы</p>
 						<div class="flex mt-2 items-center justify-between">
 							<p class=" text-white text-lg">1990 ₽</p>
 							<button
