@@ -31,10 +31,10 @@
 				</div>
 				<div class="p-2 ">
 					<a class="" href="/">Суши набор</a>
-					<p class="text-xs text-gray-400 pr-12">Описание товара, суши роллы</p>
+					<p class="text-xs text-gray-400 pr-24">Описание товара, суши роллы</p>
 					<div class="flex items-center justify-between">
-						<p class=" text-white mt-2">1990 P</p>
-						<button class=" text-xs bg-red-700 px-4 py-2 rounded-xl">Добавить</button>
+						<p class=" text-white mt-4">1990 P</p>
+						<button class=" text-sm bg-red-700 px-4 py-2 rounded-xl">Добавить</button>
 					</div>
 				</div>
 			</div>
