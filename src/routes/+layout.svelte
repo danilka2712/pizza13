@@ -47,7 +47,7 @@
 	<a class=" text-xs text-[#f9f9f9] gap-1 flex flex-col justify-center items-center" href="/"
 		><img width="22" src="home-2.svg" alt="" />Главная</a
 	>
-	<a class=" text-xs text-[#f9f9f9] gap-1 flex flex-col justify-center items-center" href="/"
+	<a class=" text-xs text-[#f9f9f9] gap-1 flex flex-col justify-center items-center" href="/cart"
 		><img width="22" src="shopping-bag.svg" alt="" />Корзина</a
 	>
 	<a class=" text-xs text-[#f9f9f9] gap-1 flex flex-col justify-center items-center" href="/"
