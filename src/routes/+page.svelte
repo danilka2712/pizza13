@@ -19,15 +19,20 @@
 	];
 </script>
 
-<div id="sushi" class="mb-24 container px-4 sm:px-0 mx-auto mt-24">
-	<h1 class="my-14 text-4xl">Суши</h1>
+<div id="sushi" class="mb-24 container px-4 sm:px-0 mx-auto mt-20">
+	<div class="flex justify-between gap-2">
+		<h1 class="my-5  border border-[#333333] rounded-lg bg-[#232323]  p-2 text-sm px-4">Суши</h1>
+		<h1 class="my-5 border-[#333333] text-white/75 border rounded-lg p-2 text-sm px-4">Пицца</h1>
+		<h1 class="my-5 border-[#333333] text-white/75 border rounded-lg p-2 text-sm px-4">Шаурма</h1>
+		<h1 class="my-5 border-[#333333] text-white/75 border rounded-lg p-2 text-sm px-4">Соус</h1>
+	</div>
 	<div class=" grid grid-cols-1 lg:grid-cols-5 sm:gap-7 gap-4 ">
 		{#each productsSushi as product}
 			<div
 				class=" relative z-0 bg-[#232323] border-[#333333] border flex  sm:flex-col justify-between  rounded-xl "
 			>
 				<div class="w-44 h-full rounded-lg">
-					<img class="object-cover rounded-lg h-full w-full p-2" src="sushi.webp" alt="" />
+					<img class="object-cover rounded-xl h-full w-full p-2" src="sushi.webp" alt="" />
 				</div>
 				<div class="p-2 ">
 					<a class=" font-medium" href="/">Суши набор</a>

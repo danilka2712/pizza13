@@ -10,7 +10,7 @@
 			<nav class="flex justify-between">
 				<div class="container mx-auto py-5 flex  justify-between items-center">
 					<div>
-						<a class="text-2xl font-medium font-heading" href="#"> ЕДАДИЛ </a>
+						<a class="text-2xl font-heading" href="#">SuperFood</a>
 					</div>
 
 					<div class="hidden xl:flex space-x-12 items-center">
