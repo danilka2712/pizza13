@@ -1,14 +1,23 @@
 <script>
 	import { cart } from '../cart.js';
 
+	const productPizza = [
+		{ id: 8, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
+		{ id: 9, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
+		{ id: 10, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
+		{ id: 11, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
+		{ id: 12, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
+		{ id: 13, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
+		{ id: 14, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' }
+	];
 	const productsSushi = [
-		{ id: 1, name: 'ЛОСОСЬ КИНГ', quantity: 1 },
-		{ id: 2, name: 'СЕТ ЯПОНАМАТРЕНА', quantity: 1 },
-		{ id: 3, name: 'СЕТ ПОСИДЕЛКИН', quantity: 1 },
-		{ id: 4, name: 'СЕТ МАНИФИК', quantity: 1 },
-		{ id: 5, name: 'СЕТ ПАНОРАМА', quantity: 1 },
-		{ id: 6, name: 'ЧЕЛЕНТАНО', quantity: 1 },
-		{ id: 7, name: 'СЕТ ЛЕГЕНДА', quantity: 1 }
+		{ id: 1, name: 'ЛОСОСЬ КИНГ', quantity: 1, img: 'sushi.webp' },
+		{ id: 2, name: 'СЕТ ЯПОНАМАТРЕНА', quantity: 1, img: 'sushi.webp' },
+		{ id: 3, name: 'СЕТ ПОСИДЕЛКИН', quantity: 1, img: 'sushi.webp' },
+		{ id: 4, name: 'СЕТ МАНИФИК', quantity: 1, img: 'sushi.webp' },
+		{ id: 5, name: 'СЕТ ПАНОРАМА', quantity: 1, img: 'sushi.webp' },
+		{ id: 6, name: 'ЧЕЛЕНТАНО', quantity: 1, img: 'sushi.webp' },
+		{ id: 7, name: 'СЕТ ЛЕГЕНДА', quantity: 1, img: 'sushi.webp' }
 	];
 	const items = [
 		{ id: 1, name: 'Суши', href: 'sushi', img: 'sushi caviar 1.svg' },
@@ -49,21 +58,17 @@
 	<div class="mb-5">
 		<img class=" rounded-lg" src="C2D29751-6AA6-11ED-94D5-55972109B354-web.webp" alt="" />
 	</div>
-	{#if (menuAdd === 'Пицца')}
+	{#if menuAdd === 'Пицца'}
 		<div class=" grid grid-cols-1 lg:grid-cols-5 sm:gap-7 gap-4 ">
-			{#each productsSushi as product}
+			{#each productPizza as product}
 				<div
 					class=" relative z-0 bg-[#232323] border-[#333333] border flex  sm:flex-col justify-between  rounded-xl "
 				>
 					<div class="w-28 h-full rounded-lg">
-						<img
-							class="object-cover rounded-xl h-full w-full p-2"
-							src="pizza.png"
-							alt=""
-						/>
+						<img class="object-cover rounded-xl h-full w-full p-2" src="pizza.png" alt="" />
 					</div>
 					<div class="p-2 ">
-						<a class=" font-medium" href="/">Пицца Супер</a>
+						<a class=" font-medium" href="/">{product.name}</a>
 						<p class="text-xs text-gray-400 pr-14">Описание товара, суши роллы</p>
 						<div class="flex items-center justify-between">
 							<p class=" text-white text-lg">1990 ₽</p>
@@ -77,7 +82,7 @@
 			{/each}
 		</div>
 	{/if}
-	{#if (menuAdd === 'Суши')}
+	{#if menuAdd === 'Суши'}
 		<div class=" grid grid-cols-1 lg:grid-cols-5 sm:gap-7 gap-4 ">
 			{#each productsSushi as product}
 				<div
