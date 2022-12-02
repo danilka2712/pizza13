@@ -3,7 +3,7 @@
 	import '../app.css';
 </script>
 
-<div class="fixed w-full top-0  pb-5 ">
+<div class="fixed w-full top-0 z-10  pb-5 ">
 	<div class="border-b  bg-[#1b1b1b] px-3 border-[#333333]">
 		<section class="">
 			<!-- navbar -->
@@ -43,7 +43,7 @@
 		</section>
 	</div>
 </div>
-<nav class="box  fixed  w-full bg-[#1b1b1b]  px-10 py-5 pb-7 bottom-0">
+<nav class="box  fixed z-10  w-full bg-[#1b1b1b]  px-10 py-5 pb-7 bottom-0">
 	<a class=" text-xs text-[#f9f9f9] gap-1 flex flex-col justify-center items-center" href="/"
 		><img width="22" src="home-2.svg" alt="" />Главная</a
 	>
