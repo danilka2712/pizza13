@@ -23,4 +23,7 @@
 			</div>
 		{/each}
 	</div>
+    <div class=" fixed bottom-32 w-full right-0 px-4">
+        <button class="text-sm bg-[#e5383b] w-full py-4 rounded-lg">Оформить заказ</button>
+    </div>
 </div>

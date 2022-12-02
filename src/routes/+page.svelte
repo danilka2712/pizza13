@@ -28,18 +28,20 @@
 		}
 		$cart = [...$cart, product];
 	};
+	let menuAdd = 'Суши';
 </script>
 
 <div id="sushi" class="mb-24 container px-4 sm:px-0 mx-auto mt-24">
-	<h1 class="my-2 mb-3">Популярное</h1>
+	<h1 class="my-2 mb-3">Популярное {menuAdd}</h1>
 	<div class="flex justify-between mb-6">
 		{#each items as item}
 			<div class="flex  flex-col justify-center items-center">
-				<div
+				<button
+					on:click={() => (menuAdd = item.name)}
 					class="  bg-[#232323] flex flex-col items-center justify-center w-14 h-14  rounded-full"
 				>
 					<img width="32" src={item.img} alt="" />
-				</div>
+				</button>
 				<span class="text-xs mt-1">{item.name}</span>
 			</div>
 		{/each}
@@ -47,26 +49,56 @@
 	<div class="mb-5">
 		<img class=" rounded-lg" src="C2D29751-6AA6-11ED-94D5-55972109B354-web.webp" alt="" />
 	</div>
-	<div class=" grid grid-cols-1 lg:grid-cols-5 sm:gap-7 gap-4 ">
-		{#each productsSushi as product}
-			<div
-				class=" relative z-0 bg-[#232323] border-[#333333] border flex  sm:flex-col justify-between  rounded-xl "
-			>
-				<div class="w-44 h-full rounded-lg">
-					<img class="object-cover rounded-xl h-full w-full p-2" src="sushi.webp" alt="" />
-				</div>
-				<div class="p-2 ">
-					<a class=" font-medium" href="/">{product.name}</a>
-					<p class="text-xs text-gray-400 pr-14">Описание товара, суши роллы</p>
-					<div class="flex items-center justify-between">
-						<p class=" text-white text-lg">1990 ₽</p>
-						<button
-							on:click={() => addToCart(product)}
-							class=" text-sm bg-[#e5383b] px-4 py-2 rounded-lg">Добавить</button
-						>
+	{#if (menuAdd === 'Пицца')}
+		<div class=" grid grid-cols-1 lg:grid-cols-5 sm:gap-7 gap-4 ">
+			{#each productsSushi as product}
+				<div
+					class=" relative z-0 bg-[#232323] border-[#333333] border flex  sm:flex-col justify-between  rounded-xl "
+				>
+					<div class="w-44 h-full rounded-lg">
+						<img
+							class="object-cover rounded-xl h-full w-full p-2"
+							src="Ветчина и грибы + Пепперон 267 Н.png"
+							alt=""
+						/>
+					</div>
+					<div class="p-2 ">
+						<a class=" font-medium" href="/">Пицца Супер</a>
+						<p class="text-xs text-gray-400 pr-14">Описание товара, суши роллы</p>
+						<div class="flex items-center justify-between">
+							<p class=" text-white text-lg">1990 ₽</p>
+							<button
+								on:click={() => addToCart(product)}
+								class=" text-sm bg-[#e5383b] px-4 py-2 rounded-lg">Добавить</button
+							>
+						</div>
 					</div>
 				</div>
-			</div>
-		{/each}
-	</div>
+			{/each}
+		</div>
+	{/if}
+	{#if (menuAdd === 'Суши')}
+		<div class=" grid grid-cols-1 lg:grid-cols-5 sm:gap-7 gap-4 ">
+			{#each productsSushi as product}
+				<div
+					class=" relative z-0 bg-[#232323] border-[#333333] border flex  sm:flex-col justify-between  rounded-xl "
+				>
+					<div class="w-44 h-full rounded-lg">
+						<img class="object-cover rounded-xl h-full w-full p-2" src="sushi.webp" alt="" />
+					</div>
+					<div class="p-2 ">
+						<a class=" font-medium" href="/">{product.name}</a>
+						<p class="text-xs text-gray-400 pr-14">Описание товара, Пицца ПОСИДЕЛКИН</p>
+						<div class="flex items-center justify-between">
+							<p class=" text-white text-lg">1990 ₽</p>
+							<button
+								on:click={() => addToCart(product)}
+								class=" text-sm bg-[#e5383b] px-4 py-2 rounded-lg">Добавить</button
+							>
+						</div>
+					</div>
+				</div>
+			{/each}
+		</div>
+	{/if}
 </div>
