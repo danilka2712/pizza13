@@ -1,17 +1,16 @@
 <script>
-    import "../app.css";
-  </script>
-  
+	import { onMount } from 'svelte';
+	import '../app.css';
+</script>
+
 <div class="fixed w-full top-0  pb-5 ">
 	<div class="border-b  bg-[#1b1b1b] px-3 border-[#333333]">
 		<section class="">
 			<!-- navbar -->
 			<nav class="flex justify-between">
-				<div class="container mx-auto py-3 flex  justify-between items-center">
+				<div class="container mx-auto py-5 flex  justify-between items-center">
 					<div>
-						<a class="text-3xl font-semibold font-heading" href="#">
-							ЕДАДИЛ
-						</a>
+						<a class="text-2xl font-medium font-heading" href="#"> ЕДАДИЛ </a>
 					</div>
 
 					<div class="hidden xl:flex space-x-12 items-center">
@@ -65,11 +64,26 @@
 		</section>
 	</div>
 </div>
-<div class="h-14 sm:hidden container mx-auto px-4 flex justify-between px-12  rounded-t-xl fixed w-full bottom-0 bg-[#1b1b1b]">
-    <a class="flex mt-3" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#f2f2f2" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444l-7 5.444V19h14z"/></svg></a>
-    <a class="flex mt-3" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#f2f2f2" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444l-7 5.444V19h14z"/></svg></a>
-    <a class="flex mt-3" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#f2f2f2" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-2-1V9.978l-7-5.444l-7 5.444V19h14z"/></svg></a>
+<nav class="box  fixed  w-full bg-[#1b1b1b]  px-10 py-5 pb-7 bottom-0">
+	<a href="/"><img width="22" src="home-2.svg" alt="" /></a>
+	<a href="/"><img width="22" src="shopping-bag.svg" alt="" /></a>
+	<a href="/"><img width="22" src="gps.svg" alt="" /></a>
+	<a href="/"><img width="22" src="frame.svg" alt="" /></a>
+</nav>
 
-</div>
+<slot />
 
-  <slot />
+<style>
+	.box {
+		display: none;
+	}
+	@media all and (display-mode: standalone) {
+		.box {
+			display: flex;
+			justify-content: space-between;
+
+			margin: 0;
+			color: rgb(197, 41, 41);
+		}
+	}
+</style>
