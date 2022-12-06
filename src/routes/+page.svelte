@@ -14,7 +14,7 @@
 	</div>
 	<div class=" flex flex-col gap-7 mb-32 mt-6">
 		{#each items as item}
-			<div class="p-6 relative bg-[#ffffff] border-[#e8e8e8]/75 border flex rounded-2xl ">
+			<div class="p-6 relative bg-[#F7F7F8] border-[#e8e8e8]/75 border flex rounded-2xl ">
 				<div>
 					<p class=" text-lg font-semibold mb-2">{item.name}</p>
 					<p class="text-sm text-[#8e8e8e]">Доставим ваш автомобиль <br /> в любой точку России</p>
