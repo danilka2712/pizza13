@@ -1,109 +1,28 @@
 <script>
-	import { cart } from '../cart.js';
-
-	const productPizza = [
-		{ id: 8, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
-		{ id: 9, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
-		{ id: 10, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
-		{ id: 11, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
-		{ id: 12, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
-		{ id: 13, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' },
-		{ id: 14, name: 'Четыре сезона', quantity: 1, img: 'pizza.png' }
-	];
-	const productsSushi = [
-		{ id: 1, name: 'ЛОСОСЬ КИНГ', quantity: 1, img: 'sushi.webp' },
-		{ id: 2, name: 'СЕТ ЯПОНАМАТРЕНА', quantity: 1, img: 'sushi.webp' },
-		{ id: 3, name: 'СЕТ ПОСИДЕЛКИН', quantity: 1, img: 'sushi.webp' },
-		{ id: 4, name: 'СЕТ МАНИФИК', quantity: 1, img: 'sushi.webp' },
-		{ id: 5, name: 'СЕТ ПАНОРАМА', quantity: 1, img: 'sushi.webp' },
-		{ id: 6, name: 'ЧЕЛЕНТАНО', quantity: 1, img: 'sushi.webp' },
-		{ id: 7, name: 'СЕТ ЛЕГЕНДА', quantity: 1, img: 'sushi.webp' }
-	];
 	const items = [
-		{ id: 1, name: 'Суши', href: 'sushi', img: 'sushi caviar 1.svg' },
-		{ id: 2, name: 'Пицца', href: 'pizzas', img: 'pizza 1.svg' },
-		{ id: 3, name: 'Шаурма', href: 'shawarma', img: 'buritto 1.svg' },
-		{ id: 4, name: 'Фастфуд', href: 'fastfood', img: 'fries 1.svg' },
-		{ id: 7, name: 'Сэндвичи', href: 'sandwiches', img: 'taco 1.svg' }
+		{ name: 'Эвакуатор', description: 'Доставим ваш автомобиль в любой точку России' },
+		{ name: 'Грузоперевозка', description: 'Доставим ваш автомобиль в любой точку России' },
+		{ name: 'Отогрев авто', description: 'Доставим ваш автомобиль в любой точку России' },
+		{ name: 'Автоподбор', description: 'Доставим ваш автомобиль в любой точку России' }
 	];
-
-	const addToCart = (product) => {
-		for (let item of $cart) {
-			if (item.id === product.id) {
-				product.quantity += 1;
-				$cart = $cart;
-				return;
-			}
-		}
-		$cart = [...$cart, product];
-	};
-	let menuAdd = 'Суши';
 </script>
 
-<div id="sushi" class="mb-24 container px-4 sm:px-0 mx-auto mt-24">
-	<h1 class="my-2 mb-3">Популярное {menuAdd}</h1>
-	<div class="flex justify-between mb-6">
+<div class="px-5">
+	<div class=" bg-[#5BC43A] p-6 h-44 border-[#e8e8e8]/75 border rounded-xl">
+		<h1 class=" text-2xl mt-8  font-medium text-white">Оказываем качественные услуги в вашем районе</h1>
+
+	</div>
+	<div class=" flex flex-col gap-7 mb-32 mt-6">
 		{#each items as item}
-			<div class="flex  flex-col justify-center items-center">
-				<button
-					on:click={() => (menuAdd = item.name)}
-					class="  bg-[#232323] flex flex-col items-center justify-center w-14 h-14  rounded-full"
-				>
-					<img width="32" src={item.img} alt="" />
-				</button>
-				<span class="text-xs mt-1">{item.name}</span>
+			<div class="p-6 relative bg-[#F8F8F9] border-[#e8e8e8]/75 border flex rounded-2xl ">
+				<div>
+					<p class=" text-lg font-semibold mb-2">{item.name}</p>
+					<p class="text-sm text-[#8e8e8e]">Доставим ваш автомобиль <br /> в любой точку России</p>
+				</div>
+				<div>
+					<img class="w-32 absolute -right-0 top-4" src="car1.svg" alt="" />
+				</div>
 			</div>
 		{/each}
 	</div>
-	<div class="mb-5">
-		<img class=" rounded-lg" src="C2D29751-6AA6-11ED-94D5-55972109B354-web.webp" alt="" />
-	</div>
-	{#if menuAdd === 'Пицца'}
-		<div class=" grid grid-cols-1 lg:grid-cols-5 sm:gap-7 gap-4 ">
-			{#each productPizza as product}
-				<div
-					class=" relative z-0 bg-[#232323] border-[#333333] border flex  sm:flex-col justify-between  rounded-xl "
-				>
-					<div class="w-36 h-full rounded-lg">
-						<img class="object-cover rounded-xl h-full w-full p-2" src="pizza.png" alt="" />
-					</div>
-					<div class="p-2 ">
-						<a class=" font-medium" href="/">{product.name}</a>
-						<p class="text-xs text-gray-400 pr-14">Описание товара, Пицца описание суши роллы</p>
-						<div class="flex mt-2 items-center justify-between">
-							<p class=" text-white text-lg">1990 ₽</p>
-							<button
-								on:click={() => addToCart(product)}
-								class=" text-sm bg-[#e5383b] px-4 py-2 rounded-lg">Добавить</button
-							>
-						</div>
-					</div>
-				</div>
-			{/each}
-		</div>
-	{/if}
-	{#if menuAdd === 'Суши'}
-		<div class=" grid grid-cols-1 lg:grid-cols-5 sm:gap-7 gap-4 ">
-			{#each productsSushi as product}
-				<div
-					class=" relative z-0 bg-[#232323] border-[#333333] border flex  sm:flex-col justify-between  rounded-xl "
-				>
-					<div class="w-44 h-full rounded-lg">
-						<img class="object-cover rounded-xl h-full w-full p-2" src="sushi.webp" alt="" />
-					</div>
-					<div class="p-2 ">
-						<a class=" font-medium" href="/">{product.name}</a>
-						<p class="text-xs text-gray-400 pr-14">Описание товара, Пицца ПОСИДЕЛКИН</p>
-						<div class="flex  items-center justify-between">
-							<p class=" text-white text-lg">1990 ₽</p>
-							<button
-								on:click={() => addToCart(product)}
-								class=" text-sm bg-[#e5383b] px-4 py-2 rounded-lg">Добавить</button
-							>
-						</div>
-					</div>
-				</div>
-			{/each}
-		</div>
-	{/if}
 </div>
