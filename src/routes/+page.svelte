@@ -3,7 +3,7 @@
 		{
 			name: 'Эвакуатор',
 			description: 'Доставим ваш автомобиль в любой точку России',
-			img: 'car2.svg'
+			img: 'car3.svg'
 		},
 		{
 			name: 'Грузоперевозка',
@@ -13,12 +13,12 @@
 		{
 			name: 'Отогрев авто',
 			description: 'Доставим ваш автомобиль в любой точку России',
-			img: 'car3.svg'
+			img: 'car2.svg'
 		},
 		{
 			name: 'Автоподбор',
 			description: 'Доставим ваш автомобиль в любой точку России',
-			img: 'car1.svg'
+			img: 'car4.svg'
 		}
 	];
 </script>
@@ -36,8 +36,8 @@
 					<p class=" text-lg font-semibold mb-2">{item.name}</p>
 					<p class="text-sm text-[#8e8e8e]">Доставим ваш автомобиль <br /> в любой точку России</p>
 				</div>
-				<div>
-					<img class="w-32 absolute -right-0 top-4" src={item.img} alt="" />
+				<div class="">
+					<img class="w-32 absolute right-1 top-4" src={item.img} alt="" />
 				</div>
 			</div>
 		{/each}
