@@ -1,16 +1,33 @@
 <script>
 	const items = [
-		{ name: 'Эвакуатор', description: 'Доставим ваш автомобиль в любой точку России' },
-		{ name: 'Грузоперевозка', description: 'Доставим ваш автомобиль в любой точку России' },
-		{ name: 'Отогрев авто', description: 'Доставим ваш автомобиль в любой точку России' },
-		{ name: 'Автоподбор', description: 'Доставим ваш автомобиль в любой точку России' }
+		{
+			name: 'Эвакуатор',
+			description: 'Доставим ваш автомобиль в любой точку России',
+			img: 'car2.svg'
+		},
+		{
+			name: 'Грузоперевозка',
+			description: 'Доставим ваш автомобиль в любой точку России',
+			img: 'car1.svg'
+		},
+		{
+			name: 'Отогрев авто',
+			description: 'Доставим ваш автомобиль в любой точку России',
+			img: 'car3.svg'
+		},
+		{
+			name: 'Автоподбор',
+			description: 'Доставим ваш автомобиль в любой точку России',
+			img: 'car1.svg'
+		}
 	];
 </script>
 
 <div class="px-5">
 	<div class=" bg-[#5BC43A] p-6 h-44 border-[#e8e8e8]/75 border rounded-xl">
-		<h1 class=" text-2xl mt-8  font-medium text-white">Оказываем качественные услуги в вашем районе</h1>
-
+		<h1 class=" text-2xl mt-8  font-medium text-white">
+			Оказываем качественные услуги в вашем районе
+		</h1>
 	</div>
 	<div class=" flex flex-col gap-7 mb-32 mt-6">
 		{#each items as item}
@@ -20,7 +37,7 @@
 					<p class="text-sm text-[#8e8e8e]">Доставим ваш автомобиль <br /> в любой точку России</p>
 				</div>
 				<div>
-					<img class="w-32 absolute -right-0 top-4" src="car1.svg" alt="" />
+					<img class="w-32 absolute -right-0 top-4" src={item.img} alt="" />
 				</div>
 			</div>
 		{/each}
