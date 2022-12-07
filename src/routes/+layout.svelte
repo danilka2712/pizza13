@@ -6,7 +6,7 @@
 
 <nav class=" px-5 py-6 flex justify-between items-center">
 	<img class=" w-32" src="logo.svg" alt="" />
-	<img class="w-4 rounded-full" src="user.png" alt="" />
+	<img class="w-5 rounded-full" src="user.png" alt="" />
 </nav>
 
 <a class="fixed box bottom-5 left-5 bg-[#F3F3F4] border rounded-xl p-3 w-12 h-12 z-10" href="/"> <img class="" src="home.svg" alt="" /></a>
