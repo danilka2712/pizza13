@@ -24,10 +24,8 @@
 </script>
 
 <div class="px-5">
-	<div class=" bg-[#5BC43A] p-6 h-44 border-[#e8e8e8]/75 border rounded-xl">
-		<h1 class=" text-2xl mt-8  font-medium text-white">
-			Оказываем качественные услуги в вашем районе
-		</h1>
+	<div class=" bg-[#5BC43A] h-44 border-[#e8e8e8]/75 border rounded-xl">
+		<img class="object-cover rounded-xl w-full h-full" src="padarki.svg" alt="">
 	</div>
 	<div class=" flex flex-col gap-7 mb-32 mt-6">
 		{#each items as item}

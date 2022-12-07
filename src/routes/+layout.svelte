@@ -4,7 +4,7 @@
 	let add = 'Главная'
 </script>
 
-<nav class=" px-5 py-4 flex justify-between items-center">
+<nav class=" px-5 py-6 flex justify-between items-center">
 	<h1 class=" font-bold text-xl">Мой район</h1>
 	<img class="w-4 rounded-full" src="gps.svg" alt="" />
 </nav>
