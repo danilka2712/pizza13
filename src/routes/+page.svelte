@@ -27,7 +27,7 @@
 	<div class=" bg-[#5BC43A] h-44 border-[#e8e8e8]/75 border rounded-xl">
 		<img class="object-cover rounded-xl w-full h-full" src="padarki.svg" alt="">
 	</div>
-	<div class=" flex flex-col gap-7 mb-32 mt-6">
+	<div class=" flex flex-col gap-5 mb-32 mt-6">
 		{#each items as item}
 			<div class="p-6 relative bg-[#F7F7F8] border-[#e8e8e8]/75 border flex rounded-2xl ">
 				<div>
