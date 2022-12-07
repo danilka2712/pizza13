@@ -24,7 +24,6 @@
 		.box {
 			display: flex;
 			justify-content: space-between;
-
 			margin: 0;
 			
 		}
