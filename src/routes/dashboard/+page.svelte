@@ -76,7 +76,7 @@
             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
 				aria-label="Default select example"
 			>
-				<option selected>Open this select menu</option>
+				<option selected>Выберите модель автомобиля</option>
 				{#each item as i}
 					<select name="" id="">{i}</select>
 				{/each}
