@@ -86,7 +86,7 @@
 	</div>
 	<div class="mt-3 border-t-2 border-dotted">
 		<div class="flex items-center justify-between">
-			<span class="my-4 text-[#8e8e8e] text-lg">Стоимость:</span>
+			<span class="my-4 text-[#8e8e8e] text">Стоимость:</span>
 			<p class=" text-xl font-semibold font-sans">1990₽</p>
 		</div>
 		<button class=" bg-[#5BC43A] p-3 rounded-2xl w-full box  py-4   font-semibold text-white"
