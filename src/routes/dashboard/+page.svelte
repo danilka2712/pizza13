@@ -78,7 +78,7 @@
 			>
 				<option selected>Выберите модель автомобиля</option>
 				{#each item as i}
-					<select name="" id="">{i}</select>
+					<option name="" id="">{i}</option>
 				{/each}
 			</select>
 		</div>
