@@ -92,18 +92,14 @@
 </div>
 
 <style>
-	.box {
-		display: none;
-	}
-	.active {
-		opacity: 100%;
-	}
+
 	@media all and (display-mode: standalone) {
 		.box {
 			position: fixed;
 			left: 20px;
-			bottom: 20px;
+			bottom: 100px;
 			margin: 0;
+			width: 91%;
 		}
 	}
 </style>
