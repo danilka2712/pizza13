@@ -99,7 +99,7 @@
 			left: 20px;
 			bottom: 100px;
 			margin: 0;
-			width: 91%;
+			width: 90%;
 		}
 	}
 </style>
