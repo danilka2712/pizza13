@@ -84,9 +84,9 @@
 			</select>
 		</div>
 	</div>
-	<div class="px-5 ">
+	<div class="mt-12">
 		<button
-			class=" bg-[#5BC43A] p-3 rounded-2xl   py-4 fixed bottom-24 mx-5 left-0 right-0 font-semibold text-white"
+			class=" bg-[#5BC43A] p-3 rounded-2xl w-full  py-4   font-semibold text-white"
 			>Оставить заявку</button
 		>
 	</div>

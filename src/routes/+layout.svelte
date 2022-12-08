@@ -6,7 +6,7 @@
 
 <nav class=" px-5 py-6 flex justify-between items-center">
 	<img class=" w-32" src="logo.svg" alt="" />
-	<img class="w-5 rounded-full" src="user.png" alt="" />
+	<a href="/register"><img class="w-5 rounded-full" src="user.png" alt="" /></a>
 </nav>
 
 <a
