@@ -59,7 +59,7 @@
 	</div>
 	<div class="flex justify-center">
 		<div class="mb-3 w-full">
-			<select
+			<select size="6"
 				class="form-select appearance-none
             block
             w-full
