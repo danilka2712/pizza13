@@ -70,9 +70,9 @@
             text-base
             font-normal
             bg-white bg-clip-padding bg-no-repeat
-            border border-solid border-[#e8e8e8]
+            border border-solid border-[#e8e8e8]/75
             transition
-            ease-in-out rounded-xl
+            ease-in-out rounded-2xl
             m-0
             focus:text-gray-700 focus:bg-white focus:border-[#5BC43A] focus:outline-none"
 				aria-label="Default select example"
