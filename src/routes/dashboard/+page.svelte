@@ -57,14 +57,30 @@
 			/>
 		</div>
 	</div>
-	<div class="flex mb-10 flex-col">
-		<span class="text-[#8e8e8e] mb-3  text-sm">Марка авто</span>
-		<select class="p-4 border-[#e8e8e8]/75 border py-4 rounded-2xl" name="" id="">
-			{#each item as i}
-				<option value="">{i}</option>
-			{/each}
-		</select>
-	</div>
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+          <select class="form-select appearance-none
+            block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            font-normal
+            text-gray-700
+            bg-white bg-clip-padding bg-no-repeat
+            border border-solid border-gray-300
+            rounded
+            transition
+            ease-in-out
+            m-0
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
 	<div class="px-5 ">
 		<button
 			class=" bg-[#5BC43A] p-3 rounded-2xl w-[90%] py-4 fixed bottom-28 mx-5 left-0 right-0 font-semibold text-white"
