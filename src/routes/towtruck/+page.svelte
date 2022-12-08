@@ -89,9 +89,11 @@
 			<span class="my-4 text-[#8e8e8e] text">Стоимость:</span>
 			<p class=" text-xl font-semibold font-sans">1990₽</p>
 		</div>
-		<button class=" bg-[#5BC43A] p-3 mt-2 rounded-2xl w-full box  py-4   font-semibold text-white"
+		<a href="/order/hello-world">
+			<button class=" bg-[#5BC43A] p-3 mt-2 rounded-2xl w-full box  py-4   font-semibold text-white"
 			>Оставить заявку</button
 		>
+		</a>
 	</div>
 </div>
 
