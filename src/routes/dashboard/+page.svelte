@@ -57,9 +57,10 @@
 			/>
 		</div>
 	</div>
-    <div class="flex justify-center">
-        <div class="mb-3 w-full">
-          <select class="form-select appearance-none
+	<div class="flex justify-center">
+		<div class="mb-3 w-full">
+			<select
+				class="form-select appearance-none
             block
             w-full
             px-4
@@ -68,18 +69,20 @@
             font-normal
             text-gray-700
             bg-white bg-clip-padding bg-no-repeat
-            border border-solid border-gray-300
+            border border-solid border-[#e8e8e8]
             transition
             ease-in-out rounded-xl
             m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-          </select>
-        </div>
-      </div>
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+				aria-label="Default select example"
+			>
+				<option selected>Open this select menu</option>
+				{#each item as i}
+					<select name="" id="">{i}</select>
+				{/each}
+			</select>
+		</div>
+	</div>
 	<div class="px-5 ">
 		<button
 			class=" bg-[#5BC43A] p-3 rounded-2xl w-[90%] py-4 fixed bottom-28 mx-5 left-0 right-0 font-semibold text-white"
