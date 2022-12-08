@@ -1,6 +1,18 @@
 <script>
+	import { onMount } from 'svelte';
+	import carModel from './carModel.json';
+
+	function filterItems(arr, query) {
+		return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
+	}
+	function car() {
+		return carModel.map((car) => car.brand);
+	}
+	let text = '';
+	$: item = filterItems(car(), text);
 </script>
 
+{text}
 <div class="px-5">
 	<div>
 		<h1 class=" font-bold text-xl my-4 mb-7">Заказать Эвакуатор</h1>
@@ -47,13 +59,11 @@
 	</div>
 	<div class="flex mb-10 flex-col">
 		<span class="text-[#8e8e8e] mb-3  text-sm">Марка авто</span>
-		<input
-			placeholder="Nissan Sunny"
-			class="p-4 border-[#e8e8e8]/75 border py-4 rounded-2xl"
-			type="text"
-			name=""
-			id=""
-		/>
+		<select class="p-4 border-[#e8e8e8]/75 border py-4 rounded-2xl" name="" id="">
+			{#each item as i}
+				<option value="">{i}</option>
+			{/each}
+		</select>
 	</div>
 	<div class="px-5 ">
 		<button
