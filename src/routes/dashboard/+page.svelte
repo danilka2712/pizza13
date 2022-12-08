@@ -23,7 +23,7 @@
 			id=""
 		/>
 	</div>
-	<div class="grid grid-cols-2 gap-4 mb-6">
+	<div class="grid grid-cols-2 gap-3 mb-6">
 		<div class="flex flex-col">
 			<span class="text-[#8e8e8e] mb-3 text-sm">Откуда</span>
 			<input
@@ -45,7 +45,7 @@
 			/>
 		</div>
 	</div>
-	<div class="flex mb-8 flex-col">
+	<div class="flex mb-10 flex-col">
 		<span class="text-[#8e8e8e] mb-3  text-sm">Марка авто</span>
 		<input
 			placeholder="Nissan Sunny"
