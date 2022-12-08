@@ -85,8 +85,25 @@
 		</div>
 	</div>
 	<div class="mt-6">
-		<button class=" bg-[#5BC43A] p-3 rounded-2xl w-full  py-4   font-semibold text-white"
+		<button class=" bg-[#5BC43A] p-3 rounded-2xl w-full box  py-4   font-semibold text-white"
 			>Оставить заявку</button
 		>
 	</div>
 </div>
+
+<style>
+	.box {
+		display: none;
+	}
+	.active {
+		opacity: 100%;
+	}
+	@media all and (display-mode: standalone) {
+		.box {
+			position: fixed;
+			left: 20px;
+			bottom: 20px;
+			margin: 0;
+		}
+	}
+</style>
