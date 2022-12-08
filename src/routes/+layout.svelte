@@ -9,7 +9,7 @@
 	<img class="w-5 rounded-full" src="user.png" alt="" />
 </nav>
 
-<a class="fixed box bottom-7 left-5 bg-[#F3F3F4] border rounded-xl p-3 w-14 h-14 z-10" href="/"> <img class="" src="home.svg" alt="" /></a>
+<a class="fixed  bottom-7 left-5 bg-[#F3F3F4] border rounded-xl p-3 w-14 h-14 z-10" href="/"> <img class="" src="home.svg" alt="" /></a>
 
 <slot />
 
