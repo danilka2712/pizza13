@@ -22,14 +22,14 @@
 		<span class="text-[#8e8e8e] mb-3 text-sm">Контактные данные</span>
 		<input
 			placeholder="Ваше имя"
-			class="p-4 mb-3 border-[#e8e8e8]/75 border py-4 rounded-2xl"
+			class="p-4 mb-3 border-[#e8e8e8]/75 focus:border-[#5BC43A]  focus:outline-none border py-4 rounded-2xl"
 			type="text"
 			name=""
 			id=""
 		/>
 		<input
 			placeholder="Номер телефона"
-			class="p-4 border-[#e8e8e8]/75 border py-4 rounded-2xl"
+			class="p-4 border-[#e8e8e8]/75 focus:border-[#5BC43A]  focus:outline-none border py-4 rounded-2xl"
 			type="text"
 			name=""
 			id=""
@@ -40,7 +40,7 @@
 			<span class="text-[#8e8e8e] mb-3 text-sm">Откуда</span>
 			<input
 				placeholder="Омск, ул.Мира"
-				class=" border-[#e8e8e8]/75 w-[100%] border p-4 rounded-2xl"
+				class=" border-[#e8e8e8]/75 focus:border-[#5BC43A]  focus:outline-none w-[100%] border p-4 rounded-2xl"
 				type="text"
 				name=""
 				id=""
@@ -50,7 +50,7 @@
 			<span class="text-[#8e8e8e] mb-3  text-sm">Куда</span>
 			<input
 				placeholder="Омск, ул.Лукашевича"
-				class=" border-[#e8e8e8]/75 w-[100%] p-4  border rounded-2xl"
+				class=" border-[#e8e8e8]/75 focus:border-[#5BC43A]  focus:outline-none w-[100%] p-4  border rounded-2xl"
 				type="text"
 				name=""
 				id=""
@@ -74,7 +74,7 @@
             transition
             ease-in-out rounded-xl
             m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            focus:text-gray-700 focus:bg-white focus:border-[#5BC43A] focus:outline-none"
 				aria-label="Default select example"
 			>
 				<option class="" selected>Acura</option>
