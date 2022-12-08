@@ -84,7 +84,7 @@
 			</select>
 		</div>
 	</div>
-	<div class="mt-12">
+	<div class="mt-6">
 		<button class=" bg-[#5BC43A] p-3 rounded-2xl w-full  py-4   font-semibold text-white"
 			>Оставить заявку</button
 		>
