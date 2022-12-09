@@ -1,18 +1,22 @@
-<script>
-	import { onMount } from 'svelte';
+<script lang="ts">
 	import carModel from './carModel.json';
 
-	function filterItems(arr, query) {
-		return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
-	}
-	function car() {
+	function brands() {
 		return carModel.map((car) => car.brand);
 	}
-	let text = '';
-	$: item = filterItems(car(), text);
+	let selected = 'Бренд';
+
+	function models(cars) {
+		carModel.find(({ brand, models }) => {
+			if (brand === cars) {
+				model = models;
+			}
+			return;
+		});
+	}
+	let model = [];
 </script>
 
-{text}
 <div class="px-5">
 	<div>
 		<h1 class=" font-bold text-xl my-4 mb-7">Заказать Эвакуатор</h1>
@@ -57,14 +61,40 @@
 			/>
 		</div>
 	</div>
-	<div class="flex flex-col justify-center">
-		<span class="text-[#8e8e8e] mb-3  text-sm">Марка автомобиля</span>
+	<div class="flex flex-col">
+		<span class="text-[#8e8e8e] mb-3  text-sm">Марка и модель автомобиля</span>
 
-		<div class="mb-3 w-full">
+		<div class=" flex gap-3 ">
 			<select
+				bind:value={selected}
+				on:change={() => models(selected)}
 				class="form-select appearance-none
             block
-            w-full
+            w-1/2
+            px-4
+            py-4
+            text-base
+            font-normal
+            bg-white bg-clip-padding bg-no-repeat
+             border border-solid border-[#e8e8e8]/75
+            transition
+            ease-in-out rounded-2xl
+            m-0
+            focus:text-gray-700 focus:bg-white focus:border-[#5BC43A] focus:outline-none"
+				aria-label="Default select example"
+			>
+				<option selected>Бренд</option>
+
+				{#each brands() as question}
+					<option value={question}>
+						{question}
+					</option>
+				{/each}
+			</select>
+			<select
+				class="form-select  appearance-none
+            block
+            w-1/2
             px-4
             py-4
             text-base
@@ -77,9 +107,12 @@
             focus:text-gray-700 focus:bg-white focus:border-[#5BC43A] focus:outline-none"
 				aria-label="Default select example"
 			>
-				<option class="" selected>Acura</option>
-				{#each item as i}
-					<option name="" id="">{i}</option>
+				<option selected>Модель</option>
+
+				{#each model as m}
+					<option value={m}>
+						{m}
+					</option>
 				{/each}
 			</select>
 		</div>
@@ -91,8 +124,8 @@
 		</div>
 		<a href="/order/hello-world">
 			<button class=" bg-[#5BC43A] p-3 mt-2 rounded-2xl w-full box  py-4   font-semibold text-white"
-			>Оставить заявку</button
-		>
+				>Оставить заявку</button
+			>
 		</a>
 	</div>
 </div>

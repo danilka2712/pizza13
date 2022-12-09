@@ -4,7 +4,7 @@
 </script>
 
 <nav class=" px-5 py-6 flex justify-between items-center">
-	<img class=" w-32" src="/logo.svg" alt="" />
+	<a href="/"><img class=" w-32" src="/logo.svg" alt="" /></a>
 	<a href="/register"><img class="w-4 rounded-full" src="/user.svg" alt="" /></a>
 </nav>
 
