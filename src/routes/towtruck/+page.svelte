@@ -23,13 +23,7 @@
 
 	<div class="flex mb-6  flex-col">
 		<span class="text-[#8e8e8e] mb-3 text-sm">Контактные данные</span>
-		<input
-		placeholder="Имя"
-		class="p-4 border-[#e8e8e8]/75 focus:border-[#5BC43A]  focus:outline-none border py-4 rounded-2xl"
-		type="text"
-		name=""
-		id=""
-	/>
+
 		<input
 			placeholder="Номер телефона"
 			class="p-4 border-[#e8e8e8]/75 focus:border-[#5BC43A]  focus:outline-none border py-4 rounded-2xl"
