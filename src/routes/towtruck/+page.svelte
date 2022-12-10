@@ -36,7 +36,7 @@
 		<div class="flex flex-col">
 			<span class="text-[#8e8e8e] mb-3 text-sm">Укажите маршрут</span>
 			<div class=" relative">
-				<span class=" text-[#C4C6C6] font-medium absolute  p-4 rounded-l-xl   h-full ">Откуда</span>
+				<span class="  font-medium absolute  p-4 rounded-l-xl   h-full ">Откуда</span>
 				<input
 					placeholder="Омск, ул.Мира"
 					class=" border-[#e8e8e8]/75 focus:border-[#5BC43A] pl-24 focus:outline-none w-[100%] border p-4 rounded-2xl"
@@ -48,7 +48,7 @@
 		</div>
 		<div class="flex flex-col">
 			<div class=" relative">
-				<span class="text-[#C4C6C6] font-medium  absolute  p-4 rounded-l-xl   h-full  ">Куда</span>
+				<span class=" font-medium  absolute  p-4 rounded-l-xl   h-full  ">Куда</span>
 				<input
 					placeholder="Омск, ул.Лукашевича"
 					class=" border-[#e8e8e8]/75 focus:border-[#5BC43A] pl-24 focus:outline-none w-[100%] border p-4 rounded-2xl"
@@ -81,7 +81,7 @@
             focus:text-gray-700 focus:bg-white focus:border-[#5BC43A] focus:outline-none"
 				aria-label="Default select example"
 			>
-				<option selected>Марка</option>
+				<option class=" font-semibold" selected>Марка</option>
 
 				{#each brands() as question}
 					<option value={question}>
@@ -105,7 +105,7 @@
             focus:text-gray-700 focus:bg-white focus:border-[#5BC43A] focus:outline-none"
 				aria-label="Default select example"
 			>
-				<option selected>Модель</option>
+				<option class=" font-semibold" selected>Модель</option>
 
 				{#each model as m}
 					<option value={m}>
