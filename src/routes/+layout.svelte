@@ -27,7 +27,7 @@
 	@media all and (display-mode: standalone) {
 		.box {
 			display: flex;
-			justify-content: space-between;
+			justify-content: center;
 			margin: 0;
 		}
 	}
