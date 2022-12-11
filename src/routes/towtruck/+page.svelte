@@ -114,6 +114,32 @@
 				{/each}
 			</select>
 		</div>
+		<div class="mt-6 flex flex-col ">
+			<span class="text-[#8e8e8e] mb-3 text-sm">Сложность погрузки</span>
+
+			<select
+				multiple
+				class="form-select  appearance-none
+            block
+            w-full
+            px-4
+            py-4
+            text-base
+            font-normal
+            bg-white bg-clip-padding bg-no-repeat
+            border border-solid border-[#e8e8e8]/75
+            transition
+            ease-in-out rounded-2xl
+            m-0
+            focus:text-gray-700 focus:bg-white focus:border-[#5BC43A] focus:outline-none"
+				aria-label="Default select example"
+			>
+				<option value="BMW"> BMW </option>
+				<option value="BMW"> BMW </option>
+				<option value="BMW"> BMW </option>
+				<option value="BMW"> BMW </option>
+			</select>
+		</div>
 	</div>
 	<div class="mt-6 border-t-2 border-dotted">
 		<div class="flex items-center justify-between">
@@ -121,7 +147,7 @@
 			<p class=" text-xl font-semibold font-sans">{selected === 'BMW' ? '1990' : '2390'}₽</p>
 		</div>
 		<a href="/order/hello-world">
-			<button class=" bg-[#5BC43A] p-3 mt-2 rounded-2xl w-full box  py-4   font-semibold text-white"
+			<button class=" bg-[#5BC43A] p-3 mt-2 rounded-2xl w-full   py-4   font-semibold text-white"
 				>Оставить заявку</button
 			>
 		</a>
