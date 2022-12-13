@@ -25,7 +25,7 @@
 			<input
 				autocomplete="street-address"
 				placeholder="Омск, ул.Мира"
-				class=" border-[#e8e8e8]/75 focus:border-[#5BC43A] pl-24 focus:outline-none w-[100%] border p-4 rounded-2xl"
+				class=" border-[#e8e8e8]/75 font-sans focus:border-[#5BC43A] pl-24 focus:outline-none w-[100%] border p-4 rounded-2xl"
 				type="text"
 				name=""
 				id=""
@@ -42,7 +42,7 @@
 					<input
 						autocomplete="street-address"
 						placeholder="Омск, ул.Лукашевича"
-						class=" border-[#e8e8e8]/75 focus:border-[#5BC43A] pl-24 focus:outline-none w-[100%] border p-4 rounded-2xl"
+						class=" border-[#e8e8e8]/75 font-sans focus:border-[#5BC43A] pl-24 focus:outline-none w-[100%] border p-4 rounded-2xl"
 						type="text"
 						name=""
 						id=""
