@@ -27,7 +27,7 @@
 
 		<input
 			placeholder="Номер телефона"
-			class="p-4 border-[#e8e8e8]/75 focus:border-[#5BC43A]  focus:outline-none border py-4 rounded-2xl"
+			class="p-4 border-[#e8e8e8]/75 font-sans focus:border-[#5BC43A]  focus:outline-none border py-4 rounded-2xl"
 			type="text"
 			name=""
 			id=""

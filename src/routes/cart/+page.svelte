@@ -1,54 +1,33 @@
 <script lang="ts">
-	import mapboxgl from 'mapbox-gl';
 	import { onMount } from 'svelte';
+	import maplibregl from 'maplibre-gl';
+	import 'maplibre-gl/dist/maplibre-gl.css';
+	import DistanceMeasurementMapLibreGlDirections, {
+		config
+	} from '$lib/map/distance-measurement-directions';
+	let directions: DistanceMeasurementMapLibreGlDirections | undefined = undefined;
+	let totalDistance = 0;
 	onMount(() => {
-		mapboxsearch.autofill({
-			accessToken:
-				'pk.eyJ1IjoiZGFuaWxrYTI3MTIiLCJhIjoiY2xiamFndWc2MDJoazNwcXZnaXZoNm9hYSJ9.lAMLaj7C67amMgE1yWU_WA',
-			options: { country: 'RU', language: 'ru' }
+		const map = new maplibregl.Map({
+			container: 'map', // container id
+			style: 'https://api.maptiler.com/maps/voyager-v2/style.json?key=EfH47Bb8jzv9Pl57bst7', // style URL
+			center: [73.37081369020865, 54.99035944909227], // starting position [lng, lat]
+			zoom: 12 // starting zoom
+		});
+		map.on('load', () => {
+			directions = new DistanceMeasurementMapLibreGlDirections(map, config);
+			directions.on('fetchroutesend', (ev) => {
+				totalDistance = ev.data?.routes[0].distance as number;
+			});
+			directions.on('removewaypoint', () => {
+				if (directions.waypoints.length < 2) {
+					totalDistance = 0;
+				}
+			});
+			directions.interactive = true;
 		});
 	});
 </script>
 
-<svelte:head>
-	<script
-		id="search-js"
-		defer=""
-		src="https://api.mapbox.com/search-js/v1.0.0-beta.14/web.js"
-	></script>
-</svelte:head>
-<div class="grid grid-cols-1 gap-3 mb-6">
-	<div class="flex flex-col">
-		<span class="text-[#8e8e8e] mb-3 text-sm">Укажите маршрут</span>
-		<div class=" relative">
-			<span class="  font-medium absolute  p-4 rounded-l-xl   h-full ">Откуда</span>
-			<input
-				autocomplete="street-address"
-				placeholder="Омск, ул.Мира"
-				class=" border-[#e8e8e8]/75 focus:border-[#5BC43A] pl-24 focus:outline-none w-[100%] border p-4 rounded-2xl"
-				type="text"
-				name=""
-				id=""
-			/>
-		</div>
-	</div>
-	<div class="flex flex-col">
-		<div class=" relative">
-			<span class=" font-medium  absolute  p-4 rounded-l-xl   h-full  ">Куда</span>
-			<form>
-				<mapbox-address-autofill
-					access-token="pk.eyJ1IjoiZGFuaWxrYTI3MTIiLCJhIjoiY2xiamFndWc2MDJoazNwcXZnaXZoNm9hYSJ9.lAMLaj7C67amMgE1yWU_WA"
-				>
-					<input
-						autocomplete="street-address"
-						placeholder="Омск, ул.Лукашевича"
-						class=" border-[#e8e8e8]/75 focus:border-[#5BC43A] pl-24 focus:outline-none w-[100%] border p-4 rounded-2xl"
-						type="text"
-						name=""
-						id=""
-					/>
-				</mapbox-address-autofill>
-			</form>
-		</div>
-	</div>
-</div>
+{totalDistance}
+<div id="map" class="w-full h-screen" />
