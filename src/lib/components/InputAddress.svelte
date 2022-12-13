@@ -40,7 +40,7 @@
 					access-token="pk.eyJ1IjoiZGFuaWxrYTI3MTIiLCJhIjoiY2xiamFndWc2MDJoazNwcXZnaXZoNm9hYSJ9.lAMLaj7C67amMgE1yWU_WA"
 				>
 					<input
-						autocomplete="street-address"
+						autocomplete="street-address1"
 						placeholder="Омск, ул.Лукашевича"
 						class=" border-[#e8e8e8]/75 font-sans focus:border-[#5BC43A] pl-24 focus:outline-none w-[100%] border p-4 rounded-2xl"
 						type="text"
