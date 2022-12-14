@@ -1,6 +1,5 @@
 <script lang="ts">
 	import mapboxgl from 'mapbox-gl';
-	import { onMount } from 'svelte';
 	mapboxgl.accessToken =
 		'pk.eyJ1IjoiZGFuaWxrYTI3MTIiLCJhIjoiY2xiamFndWc2MDJoazNwcXZnaXZoNm9hYSJ9.lAMLaj7C67amMgE1yWU_WA';
 	function updateSet() {
@@ -105,7 +104,6 @@
 		marker.on('dragend', onDragEnd);
 	}
 	let ofButton = 1;
-	let distance;
 	let address1;
 	let address2;
 	let hidden = false;
