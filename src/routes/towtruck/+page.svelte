@@ -33,6 +33,7 @@
 			id=""
 		/>
 	</div>
+	<InputAddress />
 	<div class="flex flex-col">
 		<span class="text-[#8e8e8e] mb-3  text-sm">Марка и модель автомобиля</span>
 
