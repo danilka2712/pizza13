@@ -4,6 +4,7 @@
 	mapboxgl.accessToken =
 		'pk.eyJ1IjoiZGFuaWxrYTI3MTIiLCJhIjoiY2xiamFndWc2MDJoazNwcXZnaXZoNm9hYSJ9.lAMLaj7C67amMgE1yWU_WA';
 	function updateSet() {
+		ofButton += 1;
 		const map = new mapboxgl.Map({
 			container: 'map',
 			// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
@@ -35,6 +36,7 @@
 	let coordinat1;
 
 	function addCoordinat() {
+		ofButton += 1;
 		const map = new mapboxgl.Map({
 			container: 'map',
 			// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
@@ -57,6 +59,7 @@
 		});
 	}
 	function addCoordinat2() {
+		ofButton = 1;
 		const map = new mapboxgl.Map({
 			container: 'map',
 			// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
@@ -91,6 +94,7 @@
 
 		marker.on('dragend', onDragEnd);
 	}
+	let ofButton = 1;
 	let distance;
 </script>
 
@@ -104,12 +108,27 @@
 		type="text/css"
 	/>
 </svelte:head>
-<h1>
-	{distance / 1000}.км
-</h1>
-<pre id="coordinates" class="coordinates" />
-<button on:click={() => addCoordinat2()}>Вторая точка</button>
-<button on:click={() => addCoordinat()}>Первая точка</button>
-<button on:click={() => updateSet()}>Карта</button>
+<div id="map" class=" relative h-screen top-0 z-0 ">
+	<div class="z-10 absolute">
+		<h1 class=" text-2xl">
+			{(distance / 1000).toFixed(2)}.км
+		</h1>
+		<h1 class=" text-2xl">{Number((distance / 1000).toFixed(2)) > 10 ? '3200' : '2200'} рублей</h1>
 
-<div id="map" class=" w-full h-screen" />
+		{#if ofButton === 1}
+			<button class=" absolute z-10" on:click={() => updateSet()}>Карта</button>
+		{:else if ofButton === 2}
+			<button
+				on:click={() => addCoordinat()}
+				class=" bg-[#5BC43A] fixed bottom-10 z-10 p-3 rounded-2xl w-[95%] right-3  py-4   font-semibold text-white"
+				>Первая точка</button
+			>
+		{:else if ofButton === 3}
+			<button
+				on:click={() => addCoordinat2()}
+				class=" bg-[#5BC43A] p-3 rounded-2xl w-full  py-4  font-semibold text-white"
+				>Вторая точка</button
+			>
+		{/if}
+	</div>
+</div>
