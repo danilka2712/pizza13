@@ -126,7 +126,7 @@
 		{:else if ofButton === 3}
 			<button
 				on:click={() => addCoordinat2()}
-				class=" bg-[#5BC43A] p-3 rounded-2xl w-full  py-4  font-semibold text-white"
+				class=" bg-[#5BC43A] fixed bottom-10 z-10 p-3 rounded-2xl w-[95%] right-3  py-4   font-semibold text-white"
 				>Вторая точка</button
 			>
 		{/if}
